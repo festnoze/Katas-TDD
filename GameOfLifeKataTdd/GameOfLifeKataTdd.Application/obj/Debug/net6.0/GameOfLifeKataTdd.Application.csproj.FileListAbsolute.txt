@@ -1,0 +1,11 @@
+C:\Dev\Katas\GameOfLifeKataTdd\GameOfLifeKataTdd.Application\bin\Debug\net6.0\GameOfLifeKataTdd.Application.deps.json
+C:\Dev\Katas\GameOfLifeKataTdd\GameOfLifeKataTdd.Application\bin\Debug\net6.0\GameOfLifeKataTdd.Application.dll
+C:\Dev\Katas\GameOfLifeKataTdd\GameOfLifeKataTdd.Application\bin\Debug\net6.0\GameOfLifeKataTdd.Application.pdb
+C:\Dev\Katas\GameOfLifeKataTdd\GameOfLifeKataTdd.Application\obj\Debug\net6.0\GameOfLifeKataTdd.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Katas\GameOfLifeKataTdd\GameOfLifeKataTdd.Application\obj\Debug\net6.0\GameOfLifeKataTdd.Application.AssemblyInfoInputs.cache
+C:\Dev\Katas\GameOfLifeKataTdd\GameOfLifeKataTdd.Application\obj\Debug\net6.0\GameOfLifeKataTdd.Application.AssemblyInfo.cs
+C:\Dev\Katas\GameOfLifeKataTdd\GameOfLifeKataTdd.Application\obj\Debug\net6.0\GameOfLifeKataTdd.Application.csproj.CoreCompileInputs.cache
+C:\Dev\Katas\GameOfLifeKataTdd\GameOfLifeKataTdd.Application\obj\Debug\net6.0\GameOfLifeKataTdd.Application.dll
+C:\Dev\Katas\GameOfLifeKataTdd\GameOfLifeKataTdd.Application\obj\Debug\net6.0\refint\GameOfLifeKataTdd.Application.dll
+C:\Dev\Katas\GameOfLifeKataTdd\GameOfLifeKataTdd.Application\obj\Debug\net6.0\GameOfLifeKataTdd.Application.pdb
+C:\Dev\Katas\GameOfLifeKataTdd\GameOfLifeKataTdd.Application\obj\Debug\net6.0\ref\GameOfLifeKataTdd.Application.dll

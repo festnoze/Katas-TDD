@@ -1,0 +1,228 @@
+﻿@page "/"
+@using MineSweeperKata.Models
+@using MineSweeperKata.Services
+@inject IJSRuntime JSRuntime
+
+<div class="container">
+    <div class="left-panel @NavMenuCssClass">
+        <div class="top-row ps-3 navbar navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="">Démineur TDD</a>
+                <button title="Démineur TDD" class="navbar-toggler" @onclick="ToggleNavMenu"></button>
+            </div>
+        </div>
+        <div @onclick="CreateGame">
+            <nav class="flex-column">
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                        <span class="oi oi-loop-circular" aria-hidden="true"></span>   Nouvelle Partie
+                    </NavLink>
+                </div>
+            </nav>
+        </div>
+        <div @onclick="DisplayMines">
+            <nav class="flex-column">
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                        <span class="oi oi-map-marker" aria-hidden="true"></span>   Localiser Mines
+                    </NavLink>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="right-panel">
+        @if (showPopup)
+        {
+            <div class="popup">
+                @popupMessage
+                <button @onclick="ClosePopupAndRestart">Fin!</button>
+                <button @onclick="ClosePopup">Continuer</button>
+            </div>
+        }
+
+        @if (service.IsGameInitialized)
+        {
+            <div id="gridId" class="minesweeper-grid">
+                @for (int y = 0; y < 9; y++)
+                {
+                    int savedY = y;
+                    <div class="grid-row">
+                        @for (int x = 0; x < 9; x++)
+                        {
+                            int savedX = x;
+                            <div id="cellId" class="cell @GetCellClass(savedX, savedY)"
+                                 @onclick="() => UnmineCell(savedX, savedY)"
+                                 @oncontextmenu="@(e => ChangeCellHasFlag(e, savedX, savedY))">
+                                @DisplayCellValue(savedX, savedY)
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    private MineSweeperService service = new MineSweeperService();
+    private bool showPopup = false;
+    private string popupMessage = "";
+    private bool hideMines = true;
+
+    protected override void OnInitialized()
+    {
+        CreateGame();
+        base.OnInitialized();
+    }
+
+    private void CreateGame()
+    {
+        service.CreateNewGameGrid();
+    }
+
+    private void DisplayMines()
+    {
+        hideMines = !hideMines;
+    }
+
+    private void UnmineCell(int x, int y)
+    {
+        var gameState = service.UnmineCell(x, y);
+
+        if (gameState == GameStateEnum.Won || gameState == GameStateEnum.Lose)
+        {
+            popupMessage = gameState == GameStateEnum.Won ? "Félicitations! Vous avez gagné!" : "BOOM! Je crois que vous avez sauté sur une mine ! - Game Over -";
+            showPopup = true;
+        }
+    }
+
+    private string DisplayCellValue(int x, int y)
+    {
+        if (!hideMines && service.CellHasMine(x, y))
+            return "#";
+
+        if (service.CellHasFlag(x, y))
+            return "X";
+
+        if (service.CellIsHidden(x, y))
+            return string.Empty;
+
+        var adjacentMinesCount = service.CellAdjacentMinesCount(x, y);
+        if (adjacentMinesCount is null || adjacentMinesCount.Value == 0)
+            return string.Empty;
+
+        return adjacentMinesCount.Value.ToString();
+    }
+
+    private void ChangeCellHasFlag(MouseEventArgs e, int x, int y)
+    {
+        if (service.CellIsHidden(x, y))
+        {
+            service.CellChangeFlag(x, y);
+            DisplayCellValue(x, y);
+        }
+    }
+
+    private string GetCellClass(int x, int y)
+    {
+        if (!service.CellIsHidden(x, y))
+            return "cell-revealed";
+        else
+           return "cell-hidden";
+    }
+
+    private void ClosePopupAndRestart()
+    {
+        ClosePopup();
+        CreateGame();
+    }
+
+    private void ClosePopup()
+    {
+        showPopup = false;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeVoidAsync("preventContextMenu", "gridId");
+            await JSRuntime.InvokeVoidAsync("preventContextMenu", "cellId");
+        }
+    }
+
+    private bool collapseNavMenu = false;
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
+
+<style>
+    .container {
+        display: flex;
+        height: 100vh; /* Utilisez la hauteur de la fenêtre */
+    }
+
+    .left-panel {
+        width: 220px;
+        background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%,rgb(5, 8, 30) 90%);
+    }
+
+    .right-panel {
+        flex-grow: 1;
+        background-color: rgb(115, 159, 253);
+    }
+
+    .minesweeper-grid {
+        display: inline-block;
+        padding: 70px;
+    }
+
+    .grid-row {
+        display: flex;
+    }
+
+    .cell {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #333333;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+    }
+
+    .cell-hidden {
+        background-color: grey;
+    }
+
+    .cell-revealed {
+        background-color: linen;
+    }
+
+    .cell-flagged {
+        background-color: lightyellow;
+    }
+
+    .popup {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: white;
+        border: 1px solid black;
+        z-index: 1000;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .collapse {
+        display: block;
+    }
+</style>
+

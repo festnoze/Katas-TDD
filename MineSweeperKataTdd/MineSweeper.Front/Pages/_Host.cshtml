@@ -1,0 +1,17 @@
+﻿@page "/"
+@namespace MineSweeper.Front.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = "_Layout";
+}
+
+<component type="typeof(App)" render-mode="ServerPrerendered" />
+
+<script>
+    window.preventContextMenu = (elementId) => {
+        var element = document.getElementById(elementId);
+        if (element) {
+            element.addEventListener('contextmenu', e => e.preventDefault());
+        }
+    };
+</script>

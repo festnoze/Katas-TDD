@@ -1,0 +1,11 @@
+C:\Dev\Katas\PokerHandsKataTdd\PokerHandsKataTdd.Application\obj\Debug\net6.0\PokerHandsKataTdd.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Katas\PokerHandsKataTdd\PokerHandsKataTdd.Application\obj\Debug\net6.0\PokerHandsKataTdd.Application.AssemblyInfoInputs.cache
+C:\Dev\Katas\PokerHandsKataTdd\PokerHandsKataTdd.Application\obj\Debug\net6.0\PokerHandsKataTdd.Application.AssemblyInfo.cs
+C:\Dev\Katas\PokerHandsKataTdd\PokerHandsKataTdd.Application\obj\Debug\net6.0\PokerHandsKataTdd.Application.csproj.CoreCompileInputs.cache
+C:\Dev\Katas\PokerHandsKataTdd\PokerHandsKataTdd.Application\bin\Debug\net6.0\PokerHandsKataTdd.Application.deps.json
+C:\Dev\Katas\PokerHandsKataTdd\PokerHandsKataTdd.Application\bin\Debug\net6.0\PokerHandsKataTdd.Application.dll
+C:\Dev\Katas\PokerHandsKataTdd\PokerHandsKataTdd.Application\bin\Debug\net6.0\PokerHandsKataTdd.Application.pdb
+C:\Dev\Katas\PokerHandsKataTdd\PokerHandsKataTdd.Application\obj\Debug\net6.0\PokerHandsKataTdd.Application.dll
+C:\Dev\Katas\PokerHandsKataTdd\PokerHandsKataTdd.Application\obj\Debug\net6.0\refint\PokerHandsKataTdd.Application.dll
+C:\Dev\Katas\PokerHandsKataTdd\PokerHandsKataTdd.Application\obj\Debug\net6.0\PokerHandsKataTdd.Application.pdb
+C:\Dev\Katas\PokerHandsKataTdd\PokerHandsKataTdd.Application\obj\Debug\net6.0\ref\PokerHandsKataTdd.Application.dll

@@ -1,0 +1,14 @@
+C:\Dev\Katas\KataTdd\KataTdd\bin\Debug\net6.0\KataTdd.exe
+C:\Dev\Katas\KataTdd\KataTdd\bin\Debug\net6.0\KataTdd.deps.json
+C:\Dev\Katas\KataTdd\KataTdd\bin\Debug\net6.0\KataTdd.runtimeconfig.json
+C:\Dev\Katas\KataTdd\KataTdd\bin\Debug\net6.0\KataTdd.dll
+C:\Dev\Katas\KataTdd\KataTdd\bin\Debug\net6.0\KataTdd.pdb
+C:\Dev\Katas\KataTdd\KataTdd\obj\Debug\net6.0\KataTdd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Katas\KataTdd\KataTdd\obj\Debug\net6.0\KataTdd.AssemblyInfoInputs.cache
+C:\Dev\Katas\KataTdd\KataTdd\obj\Debug\net6.0\KataTdd.AssemblyInfo.cs
+C:\Dev\Katas\KataTdd\KataTdd\obj\Debug\net6.0\KataTdd.csproj.CoreCompileInputs.cache
+C:\Dev\Katas\KataTdd\KataTdd\obj\Debug\net6.0\KataTdd.dll
+C:\Dev\Katas\KataTdd\KataTdd\obj\Debug\net6.0\refint\KataTdd.dll
+C:\Dev\Katas\KataTdd\KataTdd\obj\Debug\net6.0\KataTdd.pdb
+C:\Dev\Katas\KataTdd\KataTdd\obj\Debug\net6.0\KataTdd.genruntimeconfig.cache
+C:\Dev\Katas\KataTdd\KataTdd\obj\Debug\net6.0\ref\KataTdd.dll

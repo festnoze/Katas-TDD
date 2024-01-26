@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "GameOfLifeKataTdd.UI/1.0.0": {
+        "dependencies": {
+          "GameOfLifeKataTdd.Application": "1.0.0"
+        },
+        "runtime": {
+          "GameOfLifeKataTdd.UI.dll": {}
+        }
+      },
+      "GameOfLifeKataTdd.Application/1.0.0": {
+        "runtime": {
+          "GameOfLifeKataTdd.Application.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GameOfLifeKataTdd.UI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameOfLifeKataTdd.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
