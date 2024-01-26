@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "w/AP2u7WKKmxEYLrz41cmDjoDXYeWb5+sECeowDXSLA7cD3er5CTu0orkAs+Ip5XlcORqmK7EQx3T2k2aloG2Q==",
+  "dgSpecHash": "DzoX3/e6k19rEccD0ZQV1H5dnZw3HCYJPQpWFaWV/6a+0vry68KRQPWeA+uqC5e8wMsZFMdWY72MYnfevHYZxw==",
   "success": true,
   "projectFilePath": "C:\\Dev\\Katas\\BowlingKataTdd\\tst\\BowlingKata.Tests\\BowlingKata.Tests.csproj",
   "expectedPackageFiles": [

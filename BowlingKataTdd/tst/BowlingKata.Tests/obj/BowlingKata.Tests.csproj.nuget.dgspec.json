@@ -4,14 +4,14 @@
     "C:\\Dev\\Katas\\BowlingKataTdd\\tst\\BowlingKata.Tests\\BowlingKata.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\Katas\\BowlingKataTdd\\BowlingKata\\BowlingKata.csproj": {
+    "C:\\Dev\\Katas\\BowlingKataTdd\\src\\BowlingKata\\BowlingKata.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\Katas\\BowlingKataTdd\\BowlingKata\\BowlingKata.csproj",
+        "projectUniqueName": "C:\\Dev\\Katas\\BowlingKataTdd\\src\\BowlingKata\\BowlingKata.csproj",
         "projectName": "BowlingKata",
-        "projectPath": "C:\\Dev\\Katas\\BowlingKataTdd\\BowlingKata\\BowlingKata.csproj",
+        "projectPath": "C:\\Dev\\Katas\\BowlingKataTdd\\src\\BowlingKata\\BowlingKata.csproj",
         "packagesPath": "c:\\packages",
-        "outputPath": "C:\\Dev\\Katas\\BowlingKataTdd\\BowlingKata\\obj\\",
+        "outputPath": "C:\\Dev\\Katas\\BowlingKataTdd\\src\\BowlingKata\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\e.millerioux\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -85,8 +85,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Dev\\Katas\\BowlingKataTdd\\BowlingKata\\BowlingKata.csproj": {
-                "projectPath": "C:\\Dev\\Katas\\BowlingKataTdd\\BowlingKata\\BowlingKata.csproj"
+              "C:\\Dev\\Katas\\BowlingKataTdd\\src\\BowlingKata\\BowlingKata.csproj": {
+                "projectPath": "C:\\Dev\\Katas\\BowlingKataTdd\\src\\BowlingKata\\BowlingKata.csproj"
               }
             }
           }

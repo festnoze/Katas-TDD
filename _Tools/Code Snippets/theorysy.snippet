@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>XUnit theory test sync</Title>
+			<Shortcut>theorysy</Shortcut>
+			<Description>Extrait de code pour créé une méthode de test XUnit theory synchrone</Description>
+			<Author>Etienne MILLERIOUX</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>testname</ID>
+					<ToolTip>Nom de la méthode de test</ToolTip>
+					<Default>Test</Default>
+				</Literal>
+				<Literal>
+					<ID>params</ID>
+					<ToolTip>Paramètres de la méthode de test</ToolTip>
+					<Default>int </Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[[Theory]
+	[InlineData(0)] 
+	public void $testname$($params$)
+	{
+    /// Arrange
+    
+    /// Act
+    
+    /// Assert
+    
+}
+	$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

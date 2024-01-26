@@ -6478,8 +6478,8 @@
     },
     "BowlingKata/1.0.0": {
       "type": "project",
-      "path": "../../BowlingKata/BowlingKata.csproj",
-      "msbuildProject": "../../BowlingKata/BowlingKata.csproj"
+      "path": "../../src/BowlingKata/BowlingKata.csproj",
+      "msbuildProject": "../../src/BowlingKata/BowlingKata.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6521,8 +6521,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Dev\\Katas\\BowlingKataTdd\\BowlingKata\\BowlingKata.csproj": {
-              "projectPath": "C:\\Dev\\Katas\\BowlingKataTdd\\BowlingKata\\BowlingKata.csproj"
+            "C:\\Dev\\Katas\\BowlingKataTdd\\src\\BowlingKata\\BowlingKata.csproj": {
+              "projectPath": "C:\\Dev\\Katas\\BowlingKataTdd\\src\\BowlingKata\\BowlingKata.csproj"
             }
           }
         }
