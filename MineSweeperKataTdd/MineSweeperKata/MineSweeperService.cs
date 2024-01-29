@@ -5,10 +5,11 @@ namespace MineSweeperKata.Services;
 
 public class MineSweeperService
 {
-    private Grid grid => _grid ?? throw new ArgumentNullException(nameof(grid));
+    // WARNING: this is not a state-less version as the service hold the internal bowlingScoreSheet status, if services are accessed through webservices and concurrency apply
+    // If its the case, rather move to a state-less service, and save and retrieve the bowlingScoreSheet state from a repository
     private Grid? _grid = null;
+    private Grid grid => _grid ?? throw new ArgumentNullException(nameof(grid));    
     public bool IsGameInitialized => _grid is not null;
-
     public Grid GetClonedGrid() => grid.GetClonedGrid();
 
     public void CreateNewGameGrid(int width = 9, int height = 9, List<Point>? externallyProvidedMinesPositions = null)

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3wmTZfMbs4Qzq3A/q1OKFrh5rtPucrF0rkdHYOhbf5irbKIrMhq6FOfs/TCZrmiDP5ohQ/L2hb/2VddyBiV5Mg==",
+  "dgSpecHash": "WiMKTKN1vUr4kVm2THHimfBWoPCtZ9uMOPZJB2GyXiG8mQDx30zm8ZY0Z5Qec74dODrOUkTENzCZfa7Q40thDg==",
   "success": true,
-  "projectFilePath": "C:\\Dev\\Katas\\KataTdd\\KataTdd\\KataTdd.csproj",
+  "projectFilePath": "C:\\Dev\\Katas\\StringAdditionKataTdd\\KataTdd\\KataTdd.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -33,3 +33,4 @@ C:\Dev\Katas\GameOfLifeKataTdd\GameOfLifeKataTdd.UI\obj\Debug\net6.0\refint\Game
 C:\Dev\Katas\GameOfLifeKataTdd\GameOfLifeKataTdd.UI\obj\Debug\net6.0\GameOfLifeKataTdd.UI.pdb
 C:\Dev\Katas\GameOfLifeKataTdd\GameOfLifeKataTdd.UI\obj\Debug\net6.0\GameOfLifeKataTdd.UI.genruntimeconfig.cache
 C:\Dev\Katas\GameOfLifeKataTdd\GameOfLifeKataTdd.UI\obj\Debug\net6.0\ref\GameOfLifeKataTdd.UI.dll
+C:\Dev\Katas\GameOfLifeKataTdd\GameOfLifeKataTdd.UI\obj\Debug\net6.0\GameOfLifeKataTdd.UI.sourcelink.json

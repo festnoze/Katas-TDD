@@ -6,8 +6,7 @@ namespace KataTdd;
 public class KataTddService : IKataTddService
 {
     public KataTddService()
-    {
-    }
+    {}
 
     public decimal Add(string values)
     {

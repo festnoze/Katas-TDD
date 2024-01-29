@@ -20,3 +20,4 @@ C:\Dev\Katas\MineSweeperKataTdd\MineSweeperKata\obj\Debug\net6.0\MineSweeperKata
 C:\Dev\Katas\MineSweeperKataTdd\MineSweeperKata\obj\Debug\net6.0\refint\MineSweeperKata.dll
 C:\Dev\Katas\MineSweeperKataTdd\MineSweeperKata\obj\Debug\net6.0\MineSweeperKata.pdb
 C:\Dev\Katas\MineSweeperKataTdd\MineSweeperKata\obj\Debug\net6.0\ref\MineSweeperKata.dll
+C:\Dev\Katas\MineSweeperKataTdd\MineSweeperKata\obj\Debug\net6.0\MineSweeperKata.sourcelink.json

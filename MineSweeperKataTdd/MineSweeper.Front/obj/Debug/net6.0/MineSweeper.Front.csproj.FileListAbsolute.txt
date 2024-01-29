@@ -68,3 +68,4 @@ C:\Dev\Katas\MineSweeperKataTdd\MineSweeper.Front\obj\Debug\net6.0\scopedcss\pro
 C:\Dev\Katas\MineSweeperKataTdd\MineSweeper.Front\obj\Debug\net6.0\MineSweeper.Front.csproj.CopyComplete
 C:\Dev\Katas\MineSweeperKataTdd\MineSweeper.Front\obj\Debug\net6.0\MineSweeper.Front.genruntimeconfig.cache
 C:\Dev\Katas\MineSweeperKataTdd\MineSweeper.Front\obj\Debug\net6.0\ref\MineSweeper.Front.dll
+C:\Dev\Katas\MineSweeperKataTdd\MineSweeper.Front\obj\Debug\net6.0\MineSweeper.Front.sourcelink.json

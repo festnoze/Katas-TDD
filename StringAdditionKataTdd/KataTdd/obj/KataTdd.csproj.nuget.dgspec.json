@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\Katas\\KataTdd\\KataTdd\\KataTdd.csproj": {}
+    "C:\\Dev\\Katas\\StringAdditionKataTdd\\KataTdd\\KataTdd.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\Katas\\KataTdd\\KataTdd\\KataTdd.csproj": {
+    "C:\\Dev\\Katas\\StringAdditionKataTdd\\KataTdd\\KataTdd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\Katas\\KataTdd\\KataTdd\\KataTdd.csproj",
+        "projectUniqueName": "C:\\Dev\\Katas\\StringAdditionKataTdd\\KataTdd\\KataTdd.csproj",
         "projectName": "KataTdd",
-        "projectPath": "C:\\Dev\\Katas\\KataTdd\\KataTdd\\KataTdd.csproj",
+        "projectPath": "C:\\Dev\\Katas\\StringAdditionKataTdd\\KataTdd\\KataTdd.csproj",
         "packagesPath": "c:\\packages",
-        "outputPath": "C:\\Dev\\Katas\\KataTdd\\KataTdd\\obj\\",
+        "outputPath": "C:\\Dev\\Katas\\StringAdditionKataTdd\\KataTdd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\e.millerioux\\AppData\\Roaming\\NuGet\\NuGet.Config",

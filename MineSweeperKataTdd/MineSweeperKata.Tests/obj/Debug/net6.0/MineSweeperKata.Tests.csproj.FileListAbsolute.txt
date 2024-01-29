@@ -230,3 +230,4 @@ C:\Dev\Katas\MineSweeperKataTdd\MineSweeperKata.Tests\obj\Debug\net6.0\refint\Mi
 C:\Dev\Katas\MineSweeperKataTdd\MineSweeperKata.Tests\obj\Debug\net6.0\MineSweeperKata.Tests.pdb
 C:\Dev\Katas\MineSweeperKataTdd\MineSweeperKata.Tests\obj\Debug\net6.0\MineSweeperKata.Tests.genruntimeconfig.cache
 C:\Dev\Katas\MineSweeperKataTdd\MineSweeperKata.Tests\obj\Debug\net6.0\ref\MineSweeperKata.Tests.dll
+C:\Dev\Katas\MineSweeperKataTdd\MineSweeperKata.Tests\obj\Debug\net6.0\MineSweeperKata.Tests.sourcelink.json

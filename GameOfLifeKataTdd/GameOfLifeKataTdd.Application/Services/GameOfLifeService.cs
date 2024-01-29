@@ -9,6 +9,8 @@ public class GameOfLifeService
     public GameOfLifeService()
     { }
 
+    // WARNING: this is not a state-less version as the service hold the internal grid status, if services are accessed through webservices and concurrency apply
+    // If its the case, rather move to a state-less service, and save and retrieve the grid state from a repository
     private Grid? _gameGrid;
 
     public bool[,] CreateNewGameOfLifeGrid(int width, int height, int aliveCellsPercentage)

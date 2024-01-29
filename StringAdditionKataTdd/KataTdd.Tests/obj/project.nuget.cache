@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nEfEtY+NOAZXrRMhezIw12MCibH1RqNrW5LIkD2aTzPwKXZvz29Fhb/SYp2TgzFo8De7TywbWOoTUrAlzPy0tg==",
+  "dgSpecHash": "zFM959jj695wQ8h4jrsRjn+5XVDAmafUhPSCuc1zHlymIOzIF8RsACOL5Y5SSeCRfwLz58e051glTvFnHsSGRQ==",
   "success": true,
-  "projectFilePath": "C:\\Dev\\Katas\\KataTdd\\KataTdd.Tests\\KataTdd.Tests.csproj",
+  "projectFilePath": "C:\\Dev\\Katas\\StringAdditionKataTdd\\KataTdd.Tests\\KataTdd.Tests.csproj",
   "expectedPackageFiles": [
     "c:\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "c:\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",
