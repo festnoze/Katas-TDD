@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountKataTdd.Tests", "BankAccountKataTdd.Tests\BankAccountKataTdd.Tests.csproj", "{DF06689F-7F51-4742-AD00-0B911C2DD384}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankAccountKataTdd.Tests", "BankAccountKataTdd.Tests\BankAccountKataTdd.Tests.csproj", "{DF06689F-7F51-4742-AD00-0B911C2DD384}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountKataTdd.Application", "BankAccountKataTdd.Application\BankAccountKataTdd.Application.csproj", "{80AA4FDB-AD38-491D-B7EB-84E0C65BEE10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankAccountKataTdd.Application", "BankAccountKataTdd.Application\BankAccountKataTdd.Application.csproj", "{80AA4FDB-AD38-491D-B7EB-84E0C65BEE10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAccountKataTdd.Infra.Data", "BankAccountKataTdd.Infra.Data\BankAccountKataTdd.Infra.Data.csproj", "{097E1AFD-E83D-48D7-A11F-A7A1A05810EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{80AA4FDB-AD38-491D-B7EB-84E0C65BEE10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80AA4FDB-AD38-491D-B7EB-84E0C65BEE10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80AA4FDB-AD38-491D-B7EB-84E0C65BEE10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{097E1AFD-E83D-48D7-A11F-A7A1A05810EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{097E1AFD-E83D-48D7-A11F-A7A1A05810EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{097E1AFD-E83D-48D7-A11F-A7A1A05810EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{097E1AFD-E83D-48D7-A11F-A7A1A05810EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

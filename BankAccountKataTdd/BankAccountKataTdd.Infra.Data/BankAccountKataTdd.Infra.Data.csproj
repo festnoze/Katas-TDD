@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Studi.Api.Core" Version="1.16.0-beta.69509" />
+    <Folder Include="AccountRepository\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BankAccountKataTdd.Infra.Data\BankAccountKataTdd.Infra.Data.csproj" />
+    <PackageReference Include="Studi.Api.Core" Version="1.16.0-beta.69509" />
   </ItemGroup>
 
 </Project>
