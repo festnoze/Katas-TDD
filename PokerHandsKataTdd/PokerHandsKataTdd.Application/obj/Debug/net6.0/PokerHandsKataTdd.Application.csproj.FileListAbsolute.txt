@@ -9,3 +9,4 @@ C:\Dev\Katas\PokerHandsKataTdd\PokerHandsKataTdd.Application\obj\Debug\net6.0\Po
 C:\Dev\Katas\PokerHandsKataTdd\PokerHandsKataTdd.Application\obj\Debug\net6.0\refint\PokerHandsKataTdd.Application.dll
 C:\Dev\Katas\PokerHandsKataTdd\PokerHandsKataTdd.Application\obj\Debug\net6.0\PokerHandsKataTdd.Application.pdb
 C:\Dev\Katas\PokerHandsKataTdd\PokerHandsKataTdd.Application\obj\Debug\net6.0\ref\PokerHandsKataTdd.Application.dll
+C:\Dev\Katas\PokerHandsKataTdd\PokerHandsKataTdd.Application\obj\Debug\net6.0\PokerHandsKataTdd.Application.sourcelink.json

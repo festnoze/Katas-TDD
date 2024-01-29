@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BowlingKata.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b170d7c3f71641167a143184733a7e93918577a2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+134927db2f7f1f547884d665a7e5b1057f3a99f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("BowlingKata.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BowlingKata.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

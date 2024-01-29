@@ -29,7 +29,7 @@ LMS/App_Data/parcours/
 *_i.c
 *_p.c
 *.ilk
-*.meta
+*..vs
 *.obj
 *.pch
 *.pdb

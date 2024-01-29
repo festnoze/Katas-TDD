@@ -21,8 +21,6 @@ public record Frame
     public bool IsSpare => _secondRoll is not null && _firstRoll.RollResult + _secondRoll!.RollResult == 10;
 
     public int FirstRollScore => _firstRoll.RollResult;
-    public int SecondRollScore => _secondRoll is null ? 0 : _secondRoll!.RollResult;
+    public int SecondRollScore => _secondRoll?.RollResult ?? 0;
     public int FrameScore => FirstRollScore + SecondRollScore;
-
-    public int RollsCount => _secondRoll is null ? 1 : 2;
 }

@@ -41,11 +41,11 @@ public record BowlingGameScores
 
         if (_gameRollsHistory[9].IsStrike)
         {
-            if (_gameRollsHistory.Count == 11 && _gameRollsHistory[10].RollsCount == 2)
-                    return true;
-
             if (_gameRollsHistory.Count == 12 && _gameRollsHistory[10].IsStrike)
                     return true;
+            
+            if (_gameRollsHistory.Count == 11 && !_gameRollsHistory[10].IsStrike && _gameRollsHistory[10].IsFrameCompleted)
+                    return true;            
 
             return false;
         }
@@ -57,7 +57,9 @@ public record BowlingGameScores
     {
         // Check that the game has really ended
         if (!HasGameEnded())
+        {
             throw new InvalidOperationException($"Game hasn't ended, therefore {nameof(FinalScore)} cannot be computed");
+        }
 
         return PartialScore();
     }

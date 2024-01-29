@@ -150,6 +150,7 @@ public class BowlingScoreTests
     [InlineData(null, 0)]
     [InlineData(null, 0, 0)]
     [InlineData(46, 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5, 0, 1 )]
+    [InlineData(61, 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5, 10, 3, 3 )]
     public void HasGameEndedTest(int? awaitedFinalScore, params int[] rollResult)
     {
         /// Arrange
@@ -160,6 +161,12 @@ public class BowlingScoreTests
             _bowlingService.Roll(rollResult[i]);
 
         /// Assert
+        if (awaitedFinalScore != null)
+        {
+            Assert.Equal(awaitedFinalScore, _bowlingService.FinalScore());
+            return;
+        }
+
         try
         {
             Assert.Equal(awaitedFinalScore, _bowlingService.FinalScore());

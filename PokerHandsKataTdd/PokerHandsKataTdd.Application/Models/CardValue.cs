@@ -9,11 +9,6 @@ public record CardValue
 
     public string StringValue => Value.ToString();
 
-    public CardValue(CardValueEnum value)
-    {
-        Value = value;
-    }
-
     public CardValue(char charValue)
     {
         if (!Enum.IsDefined(typeof(CardCharValueEnum), (int)charValue))
