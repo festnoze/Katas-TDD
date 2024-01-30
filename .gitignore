@@ -27,7 +27,11 @@ LMS/App_Data/parcours/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
+*.v2
+*.bin
+*.manifest
 *.vsidx
+
 *_i.c
 *_p.c
 *.ilk
