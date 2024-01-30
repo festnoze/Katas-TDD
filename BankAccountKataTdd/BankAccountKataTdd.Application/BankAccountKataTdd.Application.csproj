@@ -14,4 +14,8 @@
     <ProjectReference Include="..\BankAccountKataTdd.Infra.Data\BankAccountKataTdd.Infra.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+
 </Project>

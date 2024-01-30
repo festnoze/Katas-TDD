@@ -1,39 +1,39 @@
-﻿using BankAccountKataTdd.Infra.Data.Models;
-using Studi.Api.Core.Exceptions.Guards;
+﻿using BankAccountKataTdd.Infra.Data;
+using BankAccountKataTdd.Infra.Data.Models;
 
 namespace BankAccountKataTdd.Tests.Fakes;
 
 public class FakeAccountRepository : IAccountRepository
 {
-    public List<AccountIto> Accounts = new List<AccountIto>();
-    public AccountIto LastAccount => Accounts.Last();
+    public BankModel Bank = new BankModel("test bank");
+    public AccountModel LastAccount => Bank.Accounts.Last();
 
     public Task<Guid> CreateNewAccountAsync(string userName)
-    {
-        if (string.IsNullOrWhiteSpace(userName))
-            throw new AccountMissingUserNameException();
-
-        if (Accounts.Any(x => x.UserName == userName))
-            throw new ExistingAccountWithSameNameException();
+    {        
+        Bank.CreateNewAccount(userName);
         
-        var accountId = Guid.NewGuid();
-        Accounts.Add(new AccountIto(accountId, userName, 0));
-
-        
-        return Task.FromResult(Accounts.Last().AccountId);
+        return Task.FromResult(Bank.Accounts.Last().AccountId);
     }
 
-    public Task<AccountIto?> GetInfosByAccountIdAsync(Guid accountId)
+    public Task<BankModel> GetBankWithAccountIdAsync(params Guid[] accountsIds)
     {
-        return Task.FromResult(Accounts.FirstOrDefault(x => x.AccountId == accountId));
+        Bank.CheckAccountExistance(accountsIds);
+        var selectedAccountsCloned = 
+                Bank.Accounts
+                .Where(acc => accountsIds.Contains(acc.AccountId))
+                .Select(acc => acc with { });
+
+        var bankWithSpecifiedAccounts =  new BankModel(
+                                                Bank.BankId, 
+                                                Bank.BankName, 
+                                                selectedAccountsCloned);
+
+        return Task.FromResult(bankWithSpecifiedAccounts);
     }
 
     public Task SetBalanceAsync(Guid accountId, decimal newBalance)
     {
-        var accountIndex = Accounts.FindIndex(x => x.AccountId == accountId);
-        if (accountIndex != -1)
-            Accounts[accountIndex] = Accounts[accountIndex] with { Balance = newBalance };
-
+        Bank.SetAccountBalance(accountId, newBalance);
         return Task.CompletedTask;
     }
 }

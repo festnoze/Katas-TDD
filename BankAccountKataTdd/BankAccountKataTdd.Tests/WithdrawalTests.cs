@@ -1,4 +1,5 @@
 using BankAccountKataTdd.Application;
+using BankAccountKataTdd.Infra.Data.Exceptions;
 using BankAccountKataTdd.Tests.Fakes;
 
 namespace BankAccountKataTdd.Tests;

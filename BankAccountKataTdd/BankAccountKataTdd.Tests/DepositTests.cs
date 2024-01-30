@@ -1,4 +1,5 @@
 using BankAccountKataTdd.Application;
+using BankAccountKataTdd.Infra.Data.Exceptions;
 using BankAccountKataTdd.Tests.Fakes;
 
 namespace BankAccountKataTdd.Tests;
@@ -61,7 +62,7 @@ public class DepositTests
     public async Task MakeDeposit_IntoANotExistingAccount_ShouldFail_Test()
     {
         /// Arrange
-        var accountId = Guid.NewGuid();
+        var accountId = Guid.NewGuid(); // Inexisting account id
 
         /// Act
         var action = () => _service.MakeDepositAsync(accountId, 10);

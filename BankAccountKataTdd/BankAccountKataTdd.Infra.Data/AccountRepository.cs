@@ -1,5 +1,4 @@
 ﻿using BankAccountKataTdd.Infra.Data.Models;
-using BankAccountKataTdd.Tests;
 
 namespace BankAccountKataTdd.Infra.Data;
 public class AccountRepository : IAccountRepository
@@ -10,7 +9,7 @@ public class AccountRepository : IAccountRepository
         throw new NotImplementedException();
     }
 
-    public async Task<AccountIto?> GetInfosByAccountIdAsync(Guid accountId)
+    public async Task<BankModel> GetBankWithAccountIdAsync(params Guid[] accountsIds)
     {
         throw new NotImplementedException();
     }

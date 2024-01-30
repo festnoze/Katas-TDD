@@ -1,6 +1,4 @@
-﻿using BankAccountKataTdd.Infra.Data.Models;
-using BankAccountKataTdd.Tests;
-using Studi.Api.Core.Exceptions.Guards;
+﻿using BankAccountKataTdd.Infra.Data;
 
 namespace BankAccountKataTdd.Application;
 
@@ -19,60 +17,44 @@ public class AccountService
 
     public async Task<decimal> GetAccountBalanceAsync(Guid accountId)
     {
-        var accountInfos = await _accountRepository.GetInfosByAccountIdAsync(accountId);
-        Guard.Against.Null(accountInfos, "Unfound account with specified id");
-
-        return accountInfos.Balance;
+        var bank = await _accountRepository.GetBankWithAccountIdAsync(accountId);
+        return bank.GetAccountBalance(accountId);
     }
 
     public async Task MakeDepositAsync(Guid accountId, decimal depositAmount)
     {
-        await CheckAccountExistanceAsync(accountId);
-        CheckDepositAmountValidity(depositAmount);
+        // Hydrate bank domain model
+        var bank = await _accountRepository.GetBankWithAccountIdAsync(accountId);
 
-        var account = await _accountRepository.GetInfosByAccountIdAsync(accountId);
-        var newBalance = account!.Balance + depositAmount;
+        // Call buisness action on model
+        bank.MakeDeposit(accountId, depositAmount);
 
-        await _accountRepository.SetBalanceAsync(accountId, newBalance);
+        // Persist modifications on domain model
+        await _accountRepository.SetBalanceAsync(accountId, bank.GetAccountBalance(accountId));
     }
 
     public async Task MakeWithdrawalAsync(Guid accountId, decimal withdrawalAmount)
     {
-        var account = await _accountRepository.GetInfosByAccountIdAsync(accountId);
+        // Hydrate bank domain model
+        var bank = await _accountRepository.GetBankWithAccountIdAsync(accountId);
 
-        await CheckAccountExistanceAsync(accountId);
-        CheckWithdrawalAmountValidity(withdrawalAmount);
-        CheckIfWithdrawalExceedsAvailableFunds(withdrawalAmount, account!.Balance);
+        // Call buisness action on model
+        bank.MakeWithdrawal(accountId, withdrawalAmount);
 
-        var newBalance = account.Balance - withdrawalAmount;
-
-        await _accountRepository.SetBalanceAsync(accountId, newBalance);
+        // Persist modifications on domain model
+        await _accountRepository.SetBalanceAsync(accountId, bank.GetAccountBalance(accountId));
     }
 
-    private async Task CheckAccountExistanceAsync(Guid accountId)
+    public async Task MakeTransfertAsync(Guid account1Id, Guid account2Id, decimal fundsTransfertAmount)
     {
-        var accountInfos = await _accountRepository.GetInfosByAccountIdAsync(accountId);
-        if (accountInfos is null)
-            throw new NotExistingAccountException();
-    }
+        // Hydrate bank domain model
+        var bank = await _accountRepository.GetBankWithAccountIdAsync(account1Id, account2Id);
 
-    private void CheckDepositAmountValidity(decimal depositAmount)
-    {
-        // Forbid negative and zero deposits and deposit above 1M (which are special deposits)
-        if (depositAmount <= 0 || depositAmount > 1000000)
-            throw new InvalidDepositAmountException();
-    }
+        // Call buisness action on model
+        bank.MakeTransfert(account1Id, account2Id, fundsTransfertAmount);
 
-    private void CheckWithdrawalAmountValidity(decimal withdrawalAmount)
-    {
-        // Forbid negative and zero deposits and deposit above 1M (which are special deposits)
-        if (withdrawalAmount <= 0 || withdrawalAmount > 7000)
-            throw new InvalidWithdrawalAmountException();
-    }
-
-    private void CheckIfWithdrawalExceedsAvailableFunds(decimal withdrawalAmount, decimal accountBalance)
-    {
-        if (withdrawalAmount > accountBalance) 
-            throw new InsufficientFundsForWithdrawalException();
+        // Persist modifications on domain model
+        await _accountRepository.SetBalanceAsync(account1Id, bank.GetAccountBalance(account1Id));
+        await _accountRepository.SetBalanceAsync(account2Id, bank.GetAccountBalance(account2Id));
     }
 }

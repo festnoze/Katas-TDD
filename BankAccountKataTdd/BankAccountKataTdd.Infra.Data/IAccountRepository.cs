@@ -1,6 +1,6 @@
 ﻿using BankAccountKataTdd.Infra.Data.Models;
 
-namespace BankAccountKataTdd.Tests;
+namespace BankAccountKataTdd.Infra.Data;
 
 public interface IAccountRepository
 {
@@ -11,14 +11,14 @@ public interface IAccountRepository
     /// <param name="initialDeposit"></param>
     /// <returns>the created account Id</returns>
     Task<Guid> CreateNewAccountAsync(string userName);
-    
+
     /// <summary>
     /// Get account infos by account id
     /// </summary>
     /// <param name="accountId"></param>
     /// <returns>the account infos ITO</returns>
-    Task<AccountIto?> GetInfosByAccountIdAsync(Guid accountId);
-    
+    Task<BankModel> GetBankWithAccountIdAsync(params Guid[] accountsIds);
+
     /// <summary>
     /// Set account updated balance
     /// </summary>
