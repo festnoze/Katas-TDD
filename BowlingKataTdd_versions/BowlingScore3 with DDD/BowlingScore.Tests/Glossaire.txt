@@ -1,0 +1,5 @@
+﻿Lancé : Roll
+Tour : Frame
+Jeu : Game
+Pair : Even
+Impair : Odd

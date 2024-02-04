@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PokerHandsKataTdd.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+134927db2f7f1f547884d665a7e5b1057f3a99f8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+99e49ff20d8ec8b1630bd16e16946555be727132")]
 [assembly: System.Reflection.AssemblyProductAttribute("PokerHandsKataTdd.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PokerHandsKataTdd.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

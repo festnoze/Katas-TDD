@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qVdn9DFdccoSTM48QL5FzDSUrSffEdRWzbxiYhwk9uC6OqjtCfduiPnYpCJrlCY106Q0gn8XgUpq87dFZ1Gqsg==",
+  "dgSpecHash": "WvQDgtjIbJWiuPmpDcnWgylQRliAi1Jd3M0tl6xpdsM5L21DwYaoDuPIQvFvuknFOF1CF7IANIo4nHTmj8Pw1A==",
   "success": true,
   "projectFilePath": "C:\\Dev\\Katas\\MineSweeperKataTdd\\MineSweeperKata.Tests\\MineSweeperKata.Tests.csproj",
   "expectedPackageFiles": [
