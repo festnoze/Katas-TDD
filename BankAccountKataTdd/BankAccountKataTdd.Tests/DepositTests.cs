@@ -30,7 +30,7 @@ public class DepositTests
         _fakeAccountRepository.LastAccount.Balance.Should().Be(0);
 
         /// Act
-        await _service.MakeDepositAsync(accountId, depositValue);
+        await _service.DepositAsync(accountId, depositValue);
 
         /// Assert
         _fakeAccountRepository.LastAccount.UserName.Should().Be(userName);
@@ -51,7 +51,7 @@ public class DepositTests
         var accountId = await _service.CreateNewAccountAsync("test user 232");
 
         /// Act
-        var action = () => _service.MakeDepositAsync(accountId, invalidDepositAmount);
+        var action = () => _service.DepositAsync(accountId, invalidDepositAmount);
 
         /// Assert
         await action.Should().ThrowAsync<InvalidDepositAmountException>();
@@ -65,7 +65,7 @@ public class DepositTests
         var accountId = Guid.NewGuid(); // Inexisting account id
 
         /// Act
-        var action = () => _service.MakeDepositAsync(accountId, 10);
+        var action = () => _service.DepositAsync(accountId, 10);
 
         /// Assert
         await action.Should().ThrowAsync<NotExistingAccountException>();

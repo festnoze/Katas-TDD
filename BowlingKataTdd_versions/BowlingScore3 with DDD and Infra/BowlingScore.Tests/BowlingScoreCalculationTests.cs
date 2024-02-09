@@ -17,7 +17,7 @@ public class BowlingScoreCalculationTests
     private readonly IBowlingGameRepository gameRepository;
 
     [Fact]
-    public async Task GameWithNoRolls_ShouldScoreZero_Test()
+    public async Task NewGameWithNoRolls_ShouldScoreZero_Test()
     {
         // Arrange
         var gameId = await service.CreateNewGameAsync();

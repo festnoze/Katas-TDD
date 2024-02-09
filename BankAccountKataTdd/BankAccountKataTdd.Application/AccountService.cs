@@ -21,7 +21,7 @@ public class AccountService
         return bank.GetAccountBalance(accountId);
     }
 
-    public async Task MakeDepositAsync(Guid accountId, decimal depositAmount)
+    public async Task DepositAsync(Guid accountId, decimal depositAmount)
     {
         // Hydrate bank domain model
         var bank = await _accountRepository.GetBankWithAccountIdAsync(accountId);
@@ -33,7 +33,7 @@ public class AccountService
         await _accountRepository.SetBalanceAsync(accountId, bank.GetAccountBalance(accountId));
     }
 
-    public async Task MakeWithdrawalAsync(Guid accountId, decimal withdrawalAmount)
+    public async Task WithdrawalAsync(Guid accountId, decimal withdrawalAmount)
     {
         // Hydrate bank domain model
         var bank = await _accountRepository.GetBankWithAccountIdAsync(accountId);
@@ -45,7 +45,7 @@ public class AccountService
         await _accountRepository.SetBalanceAsync(accountId, bank.GetAccountBalance(accountId));
     }
 
-    public async Task MakeTransfertAsync(Guid account1Id, Guid account2Id, decimal fundsTransfertAmount)
+    public async Task TransfertAsync(Guid account1Id, Guid account2Id, decimal fundsTransfertAmount)
     {
         // Hydrate bank domain model
         var bank = await _accountRepository.GetBankWithAccountIdAsync(account1Id, account2Id);

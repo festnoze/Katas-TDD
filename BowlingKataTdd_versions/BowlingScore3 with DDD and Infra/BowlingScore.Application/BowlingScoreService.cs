@@ -23,7 +23,6 @@ public class BowlingScoreService
     public async Task AddRollAsync(int downPinsCount, Guid gameId)
     {
         var game = await _gameRepository.LoadGameAsync(gameId);
-        if (game is null) throw new ArgumentNullException(nameof(AddRollAsync));
 
         game.AddRoll(downPinsCount);
 
@@ -33,8 +32,6 @@ public class BowlingScoreService
     public async Task<int> GetScoreAsync(Guid gameId)
     {
         var game = await _gameRepository.LoadGameAsync(gameId);
-        if (game is null) throw new ArgumentNullException(nameof(AddRollAsync));
-
         return game.GetScore();
     }
 }

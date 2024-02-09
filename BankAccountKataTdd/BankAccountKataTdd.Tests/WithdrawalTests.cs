@@ -30,7 +30,7 @@ public class WithdrawalTests
         await _fakeAccountRepository.SetBalanceAsync(accountId, withdrawalAmount);
 
         /// Act
-        await _service.MakeWithdrawalAsync(accountId, withdrawalAmount);
+        await _service.WithdrawalAsync(accountId, withdrawalAmount);
 
         /// Assert
         _fakeAccountRepository.LastAccount.UserName.Should().Be(userName);
@@ -49,7 +49,7 @@ public class WithdrawalTests
         var accountId = await _service.CreateNewAccountAsync("test user 232");
 
         /// Act
-        var action = () => _service.MakeDepositAsync(accountId, invalidDepositAmount);
+        var action = () => _service.DepositAsync(accountId, invalidDepositAmount);
 
         /// Assert
         await action.Should().ThrowAsync<InvalidDepositAmountException>();
@@ -67,7 +67,7 @@ public class WithdrawalTests
         await _fakeAccountRepository.SetBalanceAsync(accountId, accountBalance);
 
         /// Act
-        var action = () => _service.MakeWithdrawalAsync(accountId, withdrawalAmount);
+        var action = () => _service.WithdrawalAsync(accountId, withdrawalAmount);
 
         /// Assert
         await action.Should().ThrowAsync<InsufficientFundsForWithdrawalException>();
@@ -80,7 +80,7 @@ public class WithdrawalTests
         var accountId = Guid.NewGuid();
 
         /// Act
-        var action = () => _service.MakeDepositAsync(accountId, 10);
+        var action = () => _service.DepositAsync(accountId, 10);
 
         /// Assert
         await action.Should().ThrowAsync<NotExistingAccountException>();

@@ -27,7 +27,7 @@ public class FundTransfertTests
         await _fakeAccountRepository.SetBalanceAsync(account1Id, destAccountBalance);
 
         /// Act
-        await _service.MakeTransfertAsync(account1Id, account2Id, fundsTransfertAmount);
+        await _service.TransfertAsync(account1Id, account2Id, fundsTransfertAmount);
 
         /// Assert
         var bank = await _fakeAccountRepository.GetBankWithAccountIdAsync(account1Id, account2Id);
