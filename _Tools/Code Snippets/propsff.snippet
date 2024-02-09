@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>propsffull</Title>
+			<Shortcut>propsff</Shortcut>
+			<Description>Extrait de code pour la propriété Specflow Full stockée par le scenarioContext</Description>
+			<Author>Etienne MILLERIOUX</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Type de propriété</ToolTip>
+					<Default>string</Default>
+				</Literal>
+				<Literal>
+					<ID>property</ID>
+					<ToolTip>Nom de la propriété</ToolTip>
+					<Default>MyProperty</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[private $type$? $property$
+	{
+		get 
+		{ 
+			if (!scenarioContext.Any(e => e.Key == "$property$"))
+				return null;
+			else
+				return scenarioContext.Get<$type$?>("$property$");
+		}
+		
+		set 
+		{ 
+			if (!scenarioContext.Any(e => e.Key == "$property$"))
+				scenarioContext.Set(value, "$property$");
+		}
+	}
+	$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
