@@ -57,7 +57,7 @@ public class GameScoreCalculationTests
         // Arrange
         foreach (var downPinsCountOnRoll in downPinsCountOnRolls)
         {
-            _service.AddRoll(downPinsCountOnRoll);
+            _service.GetScore(downPinsCountOnRoll);
         }
 
         // Act
@@ -79,7 +79,7 @@ public class GameScoreCalculationTests
         // Arrange
         foreach (var downPinsCountOnRoll in downPinsCountOnRolls)
         {
-            _service.AddRoll(downPinsCountOnRoll);
+            _service.GetScore(downPinsCountOnRoll);
         }
 
         // Act
@@ -94,7 +94,7 @@ public class GameScoreCalculationTests
         // Arrange
         foreach (var downPinsCountOnRoll in downPinsCountOnRolls)
         {
-            _service.AddRoll(downPinsCountOnRoll);
+            _service.GetScore(downPinsCountOnRoll);
         }
 
         // Act
@@ -105,7 +105,7 @@ public class GameScoreCalculationTests
     }
 
     [Theory]
-    [InlineData(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 10, 1, 3)] // 20 rolls (full-game)
+    [InlineData(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 10, 1, 3)] // 20 rolls (full-game)
     public void FinalStrikeRoll_ShouldScoreOk_Test(params int[] downPinsCountOnRolls)
     {
         TestScoreCalculationAfterRolls(downPinsCountOnRolls);

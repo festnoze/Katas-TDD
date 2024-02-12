@@ -9,8 +9,6 @@ public class BowlingGameService
         _pinsDownList = new();
     }
 
-    // WARNING: stateful service! 
-    // Should persist game state through repository to make it stateless
     private List<int> _pinsDownList = null!;
 
     private bool _isEvenRoll => _pinsDownList.Count % 2 == 0;
@@ -19,34 +17,43 @@ public class BowlingGameService
         return _isEvenRoll && pinsDownCount == 10;
     }
 
-    public void AddRoll(int pinsDownCount)
+    private void AddRolls(params int[] rollValues)
     {
-        if (pinsDownCount < 0 || pinsDownCount > 10)
-            throw new WrongDownPinsCountException();
+        foreach (int rollValue in rollValues)
+        {
+            if (rollValue < 0 || rollValue > 10)
+                throw new WrongDownPinsCountException();
 
-        if (_pinsDownList is null)
-            throw new NotInitializedGameException();
+            if (_pinsDownList is null)
+                throw new NotInitializedGameException();
 
-        var isStrike = _isStrike(pinsDownCount);
+            var isStrike = _isStrike(rollValue);
 
-        _pinsDownList.Add(pinsDownCount);
+            _pinsDownList.Add(rollValue);
 
-        // Add fake roll in case of strike to complete the frame
-        if (isStrike)
-            _pinsDownList.Add(0);
+            // Add fake roll in case of strike to complete the frame
+            if (isStrike)
+                _pinsDownList.Add(0);
+        }
     }
 
-    public int GetScore()
+    public int GetScore(params int[] rollValues)
     {
+        AddRolls(rollValues);
+
         var bonusScore = 0;
-        for (int i = 0; i < _pinsDownList.Count; i+=2)
+        for (int i = 0; i < _pinsDownList.Count && i < 20; i+=2)
         {
             // Add bonus for Strike
             if (_pinsDownList[i] == 10)
             {
                 if (_pinsDownList.Count - 1 >= i + 3)
                 {
-                    bonusScore += _pinsDownList[i + 2] + _pinsDownList[i + 3];
+                    bonusScore += _pinsDownList[i + 2];
+                    if (_pinsDownList[i + 2] == 10 && _pinsDownList.Count - 1 >= i + 4)
+                        bonusScore += _pinsDownList[i + 4];
+                    else
+                        bonusScore += _pinsDownList[i + 3];
                     continue;
                 }
 
@@ -66,6 +73,6 @@ public class BowlingGameService
 
         }
 
-        return _pinsDownList.Sum() + bonusScore;
+        return _pinsDownList.Take(20).Sum() + bonusScore;
     }
 }
